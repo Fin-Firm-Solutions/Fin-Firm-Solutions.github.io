@@ -1,23 +1,31 @@
 /********** Template CSS **********/
 :root {
-    --primary: #113d72; /*** 1363C6; ***/
+    --primary: #b2d0ce; /*** 1363C6; ***/
     --secondary: #54595F; /*** 15ACE1 ***/
     --light: #F4F7FE;
     --dark: #14183E;
-    
+    --rgba255half: #ffffff80;
 }
 
 body {
     overflow-x: hidden !important;
 }
 
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
 .bg-primary-gradient {
-    background-color: #007cba !important;
-    background-image: linear-gradient(to bottom right, #020c50, #1899c8);
+    background-color: var(--primary) !important;
+    background-image: linear-gradient(to bottom right, #0a5853, #b2d0ce);
 } 
 
 .bg-primary {
-    background-color: #113d72 !important;
+    background-color: var(--primary) !important; /*** #113d72 ***/
+}
+
+.bg-light {
+    background-color: var(--primary) !important;
 }
 /*** Spinner ***/
 #spinner {
@@ -42,7 +50,8 @@ body {
 }
 
 .bg-footer {
-    background-color: #113d72 !important;
+    background-color: var(--primary) !important;
+    background-image: linear-gradient(to bottom right, #0a5853, #b2d0ce);
 }
 
 /*** Heading ***/
@@ -108,13 +117,13 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 0;
-    color: rgba(255, 255, 255, .7);
+    color: var(--secondary);
     outline: none;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: rgba(255, 255, 255, 1);
+    color: var(--secondary);
 }
 
 .navbar .dropdown-toggle::after {
@@ -161,14 +170,11 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     margin-top: -75px;
-    /* background: url(../img/bg-hero.png) center center no-repeat; */
     background-size: cover;
     position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
 }
 .curvy-hero-shape-fill {
     transform: rotate(180deg);
@@ -286,25 +292,25 @@ h6,
 .service-item {
     position: relative;
     padding: 45px 30px;
-    background: #FFFFFF;
+    background: var(--light);
     transition: .5s;
 }
 
 .service-item:hover {
-    background: var(--primary);
+    background: var(--secondary);
 }
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
     width: 90px;
     height: 90px;
-    color: var(--primary);
+    color: var(--secondary);
     background: var(--light);
     transition: .5s;
 }
 
 .service-item:hover .service-icon {
-    background: #FFFFFF;
+    background: var(--light);
 }
 
 .service-item h5,
@@ -314,19 +320,19 @@ h6,
 
 .service-item:hover h5,
 .service-item:hover p {
-    color: #FFFFFF;
+    color: var(--light);
 }
 
 .service-item a.btn {
     position: relative;
     display: flex;
-    color: var(--primary);
+    color: var(--dark);
     transition: .5s;
     z-index: 1;
 }
 
 .service-item:hover a.btn {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .service-item a.btn::before {
@@ -411,7 +417,7 @@ h6,
 .case-overlay small {
     display: inline-block;
     padding: 3px 15px;
-    color: #FFFFFF;
+    color: var(--light);
     background: rgba(20, 24, 62, .7);
     border-radius: 25px;
     margin-bottom: 15px;
@@ -419,8 +425,8 @@ h6,
 
 .case-overlay span.btn:hover {
     color: var(--primary);
-    background: #FFFFFF;
-    border-color: #FFFFFF;
+    background: var(--light);
+    border-color: var(--light);
 }
 
 
@@ -436,7 +442,7 @@ h6,
 }
 
 .accordion .accordion-button:not(.collapsed) {
-    color: #FFFFFF;
+    color: var(--light);
     background: var(--primary);
     box-shadow: none;
 }
@@ -475,7 +481,7 @@ h6,
     align-items: center;
     justify-content: center;
     color: var(--primary);
-    background: #FFFFFF;
+    background: var(--light);
     border: 1px solid var(--primary);
     border-radius: 40px;
     font-size: 18px;
@@ -485,7 +491,7 @@ h6,
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--primary);
-    color: #FFFFFF;
+    color: var(--light);
 }
 
 .testimonial-carousel .owl-dots {
@@ -499,7 +505,7 @@ h6,
     margin-right: 10px;
     width: 15px;
     height: 15px;
-    background: #FFFFFF;
+    background: var(--light);
     border: 1px solid var(--primary);
     border-radius: 15px;
     transition: .5s;
@@ -558,7 +564,7 @@ h6,
 }
 
 .footer .btn.btn-link:hover {
-    color: #FFFFFF;
+    color: var(--light);
 }
 
 .footer .btn.btn-link::before {
@@ -585,7 +591,7 @@ h6,
 }
 
 .footer .copyright a:hover {
-    color: #FFFFFF;
+    color: var(--light);
 }
 
 .footer .footer-menu a {
