@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden !important;
+    
 }
 
 .btn-primary {
@@ -26,6 +27,10 @@ body {
 
 .bg-light {
     background-color: var(--primary) !important;
+}
+
+.bg-white {
+    background-color: var(--rgba255half);
 }
 /*** Spinner ***/
 #spinner {
